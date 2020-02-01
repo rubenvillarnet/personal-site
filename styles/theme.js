@@ -1,7 +1,7 @@
 const theme = {
   colors: {
-    primary: '#fab821',
-  },
-}
+    primary: '#fab821'
+  }
+};
 
-export default theme
+export default theme;
