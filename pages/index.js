@@ -1,24 +1,23 @@
-import React from 'react'
-import Head from 'next/head'
-import styled from 'styled-components'
+import React from 'react';
+import Head from 'next/head';
+import styled from 'styled-components';
 
 const IndexStyle = styled.div`
-  h1{
-    color: ${({theme}) => theme.colors.primary}
+  h1 {
+    color: ${({ theme }) => theme.colors.primary};
   }
-`
+`;
 
 const Index = () => (
   <div>
     <Head>
       <title>Home</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel='icon' href='/favicon.ico' />
     </Head>
     <IndexStyle>
       <h1>Hola Mundo!</h1>
     </IndexStyle>
-
   </div>
-)
+);
 
-export default Index
+export default Index;
