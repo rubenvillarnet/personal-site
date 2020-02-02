@@ -1,10 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import styled from 'styled-components';
-
 const IndexStyle = styled.div`
   h1 {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.text};
+    font-family: 'Montserrat-Regular';
   }
 `;
 
