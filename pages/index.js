@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import styled from 'styled-components';
+import { useSelector, useDispatch } from 'react-redux';
+import { switchTheme } from '../store';
 import me from '../public/static/img/foto-ironhack.png';
 import mail from '../public/static/svg/mail.svg';
 import linkedin from '../public/static/svg/linkedin.svg';
 import github from '../public/static/svg/github.svg';
+import mailDark from '../public/static/svg/mail_dark.svg';
+import linkedinDark from '../public/static/svg/linkedin_dark.svg';
+import githubDark from '../public/static/svg/github_dark.svg';
 import moon from '../public/static/svg/moon.svg';
 import sun from '../public/static/svg/sun.svg';
 
@@ -16,6 +21,7 @@ const IndexStyle = styled.div`
   align-items: center;
   position: relative;
   background-color: ${({ theme }) => theme.colors.background};
+  transition: background-color 0.5s;
   .switch-mode {
     position: absolute;
     top: 2rem;
@@ -100,9 +106,8 @@ const IndexStyle = styled.div`
 `;
 
 const Index = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const switchMode = () => setIsDarkMode(!isDarkMode);
+  const isDarkTheme = useSelector(state => state.isDarkTheme);
+  const dispatch = useDispatch();
   return (
     <div>
       <Head>
@@ -111,22 +116,16 @@ const Index = () => {
       </Head>
       <IndexStyle>
         <div className='container'>
-          <div className='switch-mode' onClick={switchMode}>
-            {isDarkMode ? (
+          <div className='switch-mode' onClick={() => dispatch(switchTheme())}>
+            {isDarkTheme ? (
               <React.Fragment>
                 <img src={sun} alt='' />
-              <span>
-                Light Theme
-              </span>
-                
+                <span>Light Theme</span>
               </React.Fragment>
             ) : (
               <React.Fragment>
                 <img src={moon} alt='' />
-              <span>
-                Dark Theme
-              </span>
-
+                <span>Dark Theme</span>
               </React.Fragment>
             )}
           </div>
@@ -143,7 +142,7 @@ const Index = () => {
               <ul>
                 <li>
                   <a href='mailto:rubenvillar.net' rel='noopener noreferrer'>
-                    <img src={mail} alt='' />
+                    <img src={isDarkTheme? mailDark : mail} alt='' />
                     ruben@rubenvillar.net
                   </a>
                 </li>
@@ -153,7 +152,7 @@ const Index = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <img src={github} alt='' />
+                    <img src={isDarkTheme? githubDark : github} alt='' />
                     rubenvillarnet
                   </a>
                 </li>
@@ -163,7 +162,7 @@ const Index = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <img src={linkedin} alt='' />
+                    <img src={isDarkTheme? linkedinDark : linkedin} alt='' />
                     rubenvillargrela
                   </a>
                 </li>
