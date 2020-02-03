@@ -19,8 +19,8 @@ const Index = () => {
   return (
     <div>
       <Head>
-        <title>Home</title>
-        <link rel='icon' href='/favicon.ico' />
+        <title>Rubén Villar Grela - Desarrollador Front End</title>
+        <link rel='icon' href='/favicon.png' />
       </Head>
       <IndexStyle isDarkTheme={isDarkTheme}>
         <div className='container'>
