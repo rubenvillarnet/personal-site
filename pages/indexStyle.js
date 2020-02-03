@@ -97,4 +97,4 @@ const IndexStyle = styled.div`
   }
 `;
 
-export { IndexStyle };
+export default IndexStyle;

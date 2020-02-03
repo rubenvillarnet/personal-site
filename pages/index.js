@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { useSelector, useDispatch } from 'react-redux';
 import { switchTheme } from '../store';
-import { IndexStyle } from './indexStyle';
+import IndexStyle from './indexStyle';
 import me from '../public/static/img/foto-ironhack.png';
 import mail from '../public/static/svg/mail.svg';
 import linkedin from '../public/static/svg/linkedin.svg';
