@@ -125,12 +125,12 @@ const Index = () => {
             {isDarkTheme ? (
               <React.Fragment>
                 <img src={sun} alt='' />
-                <span>Light Theme</span>
+                <span>Tema claro</span>
               </React.Fragment>
             ) : (
               <React.Fragment>
                 <img src={moon} alt='' />
-                <span>Dark Theme</span>
+                <span>Tema oscuro</span>
               </React.Fragment>
             )}
           </div>
