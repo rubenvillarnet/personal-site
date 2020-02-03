@@ -1,10 +1,85 @@
 import React from 'react';
 import Head from 'next/head';
 import styled from 'styled-components';
+import me from '../public/static/img/foto-ironhack.png';
+import mail from '../public/static/svg/mail.svg';
+import linkedin from '../public/static/svg/linkedin.svg';
+import github from '../public/static/svg/github.svg';
+
 const IndexStyle = styled.div`
-  h1 {
-    color: ${({ theme }) => theme.colors.text};
-    font-family: 'Montserrat-Regular';
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    display: flex;
+    margin: 30px;
+    .img-area {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      justify-content: center;
+      .avatar {
+        border-radius: 50%;
+        max-width: 150px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-right: 1rem;
+      }
+    }
+    .text-area {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+        a {
+          color: ${({ theme }) => theme.colors.links};
+          text-decoration: none;
+        }
+        img {
+          width: 1rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      .text-area {
+        margin-top: 0.5rem;
+        span {
+          display: block;
+          text-align: center;
+        }
+        h1 {
+          font-size: 2rem;
+          text-align: center;
+        }
+        p {
+          font-size: 1.25rem;
+          text-align: center;
+        }
+        .links {
+          display: flex;
+          justify-content: center;
+        }
+        ul {
+          margin-top: 1rem;
+          display: inline-block;
+          li {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -15,7 +90,48 @@ const Index = () => (
       <link rel='icon' href='/favicon.ico' />
     </Head>
     <IndexStyle>
-      <h1>Hola Mundo!</h1>
+      <div className='container'>
+        <div className='img-area'>
+          <div className='img-container'>
+            <img src={me} alt='' className='avatar' />
+          </div>
+        </div>
+        <div className='text-area'>
+          <span>Hola, me llamo</span>
+          <h1>Rubén Villar Grela</h1>
+          <p>Y soy desarrollador Full Stack</p>
+          <div className='links'>
+            <ul>
+              <li>
+                <a href='mailto:rubenvillar.net' rel='noopener noreferrer'>
+                  <img src={mail} alt='' />
+                  ruben@rubenvillar.net
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://github.com/rubenvillarnet'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <img src={github} alt='' />
+                  rubenvillarnet
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://www.linkedin.com/in/rubenvillargrela/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <img src={linkedin} alt='' />
+                  rubenvillargrela
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </IndexStyle>
   </div>
 );
