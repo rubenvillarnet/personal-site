@@ -42,6 +42,11 @@ const IndexStyle = styled.div`
       align-items: center;
       flex-grow: 1;
       justify-content: center;
+      filter: ${({ isDarkTheme }) =>
+        isDarkTheme
+          ? 'contrast(93%) brightness(50%) saturate(150%) grayscale(86%)'
+          : 'none'};
+      transition: filter 2s;
       .avatar {
         border-radius: 50%;
         max-width: 150px;
@@ -114,7 +119,7 @@ const Index = () => {
         <title>Home</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <IndexStyle>
+      <IndexStyle isDarkTheme={isDarkTheme}>
         <div className='container'>
           <div className='switch-mode' onClick={() => dispatch(switchTheme())}>
             {isDarkTheme ? (
@@ -142,7 +147,7 @@ const Index = () => {
               <ul>
                 <li>
                   <a href='mailto:rubenvillar.net' rel='noopener noreferrer'>
-                    <img src={isDarkTheme? mailDark : mail} alt='' />
+                    <img src={isDarkTheme ? mailDark : mail} alt='' />
                     ruben@rubenvillar.net
                   </a>
                 </li>
@@ -152,7 +157,7 @@ const Index = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <img src={isDarkTheme? githubDark : github} alt='' />
+                    <img src={isDarkTheme ? githubDark : github} alt='' />
                     rubenvillarnet
                   </a>
                 </li>
@@ -162,7 +167,7 @@ const Index = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <img src={isDarkTheme? linkedinDark : linkedin} alt='' />
+                    <img src={isDarkTheme ? linkedinDark : linkedin} alt='' />
                     rubenvillargrela
                   </a>
                 </li>
