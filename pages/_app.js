@@ -2,7 +2,7 @@ import App from 'next/app';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import Router from 'next/router';
-import theme from '../styles/theme';
+import theme from '../styles/themes/light';
 import GlobalStyle from '../styles/GlobalStyle';
 import { initGA, logPageView } from '../utils/analytics';
 
