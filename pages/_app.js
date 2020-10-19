@@ -1,5 +1,4 @@
-import App from 'next/app';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import Router from 'next/router';
@@ -8,39 +7,28 @@ import lightTheme from '../styles/themes/light';
 import darkTheme from '../styles/themes/dark';
 import GlobalStyle from '../styles/GlobalStyle';
 import { initGA, logPageView } from '../utils/analytics';
-import withReduxStore from '../lib/with-redux-store';
+import { useStore } from '../store';
 
-class MyApp extends App {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isDarkTheme: this.props.reduxStore.getState().isDarkTheme
-    };
-  }
+export default function App({ Component, pageProps }) {
+  const store = useStore(pageProps.initialReduxState);
+  const [isDarkTheme, setDarkTheme] = useState(store.getState().isDarkTheme);
 
-  componentDidMount() {
+  useEffect(() => {
     initGA();
     logPageView();
     Router.events.on('routeChangeComplete', logPageView);
-  }
+  }, []);
 
-  render() {
-    const { Component, pageProps, reduxStore } = this.props;
-    const { isDarkTheme } = this.state;
-    reduxStore.subscribe(() => {
-      this.setState({
-        isDarkTheme: reduxStore.getState().isDarkTheme
-      });
-    });
-    return (
-      <Provider store={reduxStore}>
-        <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-          <GlobalStyle />
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </Provider>
-    );
-  }
+  store.subscribe(() => {
+    setDarkTheme(store.getState().isDarkTheme);
+  });
+
+  return (
+    <Provider store={store}>
+      <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </Provider>
+  );
 }
-
-export default withReduxStore(MyApp);
