@@ -14,7 +14,7 @@ import moon from '../public/static/svg/moon.svg';
 import sun from '../public/static/svg/sun.svg';
 
 const Index = () => {
-  const isDarkTheme = useSelector(state => state.isDarkTheme);
+  const isDarkTheme = useSelector((state) => state.isDarkTheme);
   const dispatch = useDispatch();
   return (
     <div>
@@ -24,19 +24,23 @@ const Index = () => {
       </Head>
       <IndexStyle isDarkTheme={isDarkTheme}>
         <div className='container'>
-          <div className='switch-mode' onClick={() => dispatch(switchTheme())}>
+          <button
+            className='switch-mode'
+            type='button'
+            onClick={() => dispatch(switchTheme())}
+          >
             {isDarkTheme ? (
-              <React.Fragment>
+              <>
                 <img src={sun} alt='' />
                 <span>Tema claro</span>
-              </React.Fragment>
+              </>
             ) : (
-              <React.Fragment>
+              <>
                 <img src={moon} alt='' />
                 <span>Tema oscuro</span>
-              </React.Fragment>
+              </>
             )}
-          </div>
+          </button>
           <div className='img-area'>
             <div className='img-container'>
               <img src={me} alt='' className='avatar' />

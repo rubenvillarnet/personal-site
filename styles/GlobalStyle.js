@@ -38,6 +38,14 @@ const GlobalStyle = createGlobalStyle`
   p {
     margin: 0;
   }
+
+  button{
+    color: inherit;
+    font-family: inherit;
+    &:focus{
+      outline: none;
+    }
+  }
 `;
 
 export default GlobalStyle;

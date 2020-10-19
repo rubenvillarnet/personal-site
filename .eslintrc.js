@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true
+    es6: true,
+    node: true
   },
   parser: 'babel-eslint',
   extends: ['airbnb', 'prettier', 'prettier/react'],
@@ -23,11 +24,7 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/forbid-prop-types': [0, { forbid: ['any'] }],
     'react/prop-types': 0,
-    'react/jsx-props-no-spreading': 'off'
-  },
-  env: {
-    jest: true,
-    browser: true,
-    node: true
+    'react/jsx-props-no-spreading': 'off',
+    'no-underscore-dangle': [1, { allow: ['__NEXT_REDUX_STORE__'] }]
   }
 };

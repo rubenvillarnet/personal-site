@@ -16,6 +16,8 @@ const IndexStyle = styled.div`
     cursor: pointer;
     display: flex;
     align-items: center;
+    border: none;
+    background: transparent;
     img {
       width: 1rem;
       margin-right: 0.5rem;
