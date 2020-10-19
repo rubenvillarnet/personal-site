@@ -1,7 +1,7 @@
 const light = {
   colors: {
     background: '#fff',
-    text: '#6f6f6f',
+    text: '#252734',
     links: '#315DA9'
   }
 };
