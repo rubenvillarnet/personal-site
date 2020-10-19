@@ -18,7 +18,7 @@ const IndexStyle = styled.div`
     align-items: center;
     border: none;
     background: transparent;
-    img {
+    svg {
       width: 1rem;
       margin-right: 0.5rem;
     }
@@ -59,9 +59,10 @@ const IndexStyle = styled.div`
           color: ${({ theme }) => theme.colors.links};
           text-decoration: none;
         }
-        img {
+        .link-icon {
           width: 1rem;
           margin-right: 0.5rem;
+          fill: ${({ theme }) => theme.colors.links};
         }
       }
     }

@@ -4,14 +4,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { switchTheme } from '../store';
 import IndexStyle from './indexStyle';
 import me from '../public/static/img/foto-ironhack.png';
-import mail from '../public/static/svg/mail.svg';
-import linkedin from '../public/static/svg/linkedin.svg';
-import github from '../public/static/svg/github.svg';
-import mailDark from '../public/static/svg/mail_dark.svg';
-import linkedinDark from '../public/static/svg/linkedin_dark.svg';
-import githubDark from '../public/static/svg/github_dark.svg';
-import moon from '../public/static/svg/moon.svg';
-import sun from '../public/static/svg/sun.svg';
+import Mail from '../public/static/svg/mail.svg';
+import Linkedin from '../public/static/svg/linkedin.svg';
+import Github from '../public/static/svg/github.svg';
+import Moon from '../public/static/svg/moon.svg';
+import Sun from '../public/static/svg/sun.svg';
 
 const Index = () => {
   const isDarkTheme = useSelector((state) => state.isDarkTheme);
@@ -31,12 +28,12 @@ const Index = () => {
           >
             {isDarkTheme ? (
               <>
-                <img src={sun} alt='' />
+                <Sun />
                 <span>Tema claro</span>
               </>
             ) : (
               <>
-                <img src={moon} alt='' />
+                <Moon />
                 <span>Tema oscuro</span>
               </>
             )}
@@ -54,7 +51,7 @@ const Index = () => {
               <ul>
                 <li>
                   <a href='mailto:rubenvillar.net' rel='noopener noreferrer'>
-                    <img src={isDarkTheme ? mailDark : mail} alt='' />
+                    <Mail className='link-icon' />
                     ruben@rubenvillar.net
                   </a>
                 </li>
@@ -64,7 +61,7 @@ const Index = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <img src={isDarkTheme ? githubDark : github} alt='' />
+                    <Github className='link-icon' />
                     rubenvillarnet
                   </a>
                 </li>
@@ -74,7 +71,7 @@ const Index = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <img src={isDarkTheme ? linkedinDark : linkedin} alt='' />
+                    <Linkedin className='link-icon' />
                     rubenvillargrela
                   </a>
                 </li>
