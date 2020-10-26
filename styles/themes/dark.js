@@ -1,8 +1,11 @@
 const light = {
   colors: {
-    background: '#252734',
-    text: '#EBEBEC',
-    links: '#FFAF29'
+    background: '#333646',
+    backgroundSecondary: '#252734',
+    primary: '#EBEBEC',
+    secondary: '#FFAF29',
+    sectionBackground: '#424657',
+    error: '#ff0000'
   }
 };
 

@@ -4,7 +4,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from 'redux-thunk';
 
 const defaultInitialState = {
-  isDarkTheme: false
+  isDarkTheme: true
 };
 
 export const actionTypes = {
