@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-scroll';
 import { motion, AnimateSharedLayout } from 'framer-motion';
+import ScrollLock from 'react-scrolllock';
 
 import { switchTheme } from '../store';
 import IndexStyle from '../styles/pages';
@@ -136,13 +137,13 @@ const Index = () => {
       technologies: 'WordPress, HTML5, CSS3'
     }
   ];
-
   return (
     <div>
       <Head>
         <title>Rubén Villar Grela - Desarrollador Front End</title>
         <link rel='icon' href='/favicon.png' />
       </Head>
+      <ScrollLock isActive={!!displaySkill} />
       <IndexStyle isDarkTheme={isDarkTheme}>
         <button
           className='switch-mode'

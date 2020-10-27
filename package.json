@@ -24,6 +24,7 @@
     "react-hook-form": "^6.9.5",
     "react-redux": "^7.2.1",
     "react-scroll": "^1.8.1",
+    "react-scrolllock": "^5.0.1",
     "react-textarea-autosize": "^8.2.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
