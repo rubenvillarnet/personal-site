@@ -154,7 +154,7 @@ const Index = () => {
           property='og:description'
           content='Sitio web de Rubén Villar Grela, desarrollador web freelance'
         />
-        <meta property='og:image' content='/img/foto-ironhack.png' />
+        <meta property='og:image' content='/og-image.png' />
         <meta property='og:url' content='https://rubenvillar.net' />
         <meta
           property='og:site_name'
@@ -166,7 +166,7 @@ const Index = () => {
           name='twitter:description'
           content='Sitio web de Rubén Villar Grela, desarrollador web freelance'
         />
-        <meta name='twitter:image' content='/img/foto-ironhack.png' />
+        <meta name='twitter:image' content='/og-image.png' />
         <meta name='twitter:site' content='@rubenvillarnet' />
         <meta name='twitter:creator' content='@rubenvillarnet' />
       </Head>
