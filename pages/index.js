@@ -219,9 +219,9 @@ const Index = () => {
                 </span>
               </h1>
               <p className='description'>
-                Soy un desarrollador full stack, especializado en el desarrollo
-                de aplicaciones web completas usando React, Next.js, Node.js,
-                Express y más.
+                Soy un desarrollador full stack freelance, especializado en el
+                desarrollo de aplicaciones web completas usando React, Next.js,
+                Node.js, Express y más.
               </p>
               <ul className='nav-links'>
                 <Link to='skills' offset={-32} smooth>
