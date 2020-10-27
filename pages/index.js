@@ -44,6 +44,11 @@ const Index = () => {
     setDisplaySkill(undefined);
   };
 
+  const handleSwitchTheme = () => {
+    localStorage.setItem('theme', isDarkTheme ? 'light' : 'dark');
+    dispatch(switchTheme());
+  };
+
   const skills = [
     {
       icon: <FrontEndIcon />,
@@ -148,7 +153,7 @@ const Index = () => {
         <button
           className='switch-mode'
           type='button'
-          onClick={() => dispatch(switchTheme())}
+          onClick={handleSwitchTheme}
         >
           <Sun />
           <div className='switch'>

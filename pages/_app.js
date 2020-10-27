@@ -7,7 +7,7 @@ import lightTheme from '../styles/themes/light';
 import darkTheme from '../styles/themes/dark';
 import GlobalStyle from '../styles/GlobalStyle';
 import { initGA, logPageView } from '../utils/analytics';
-import { useStore } from '../store';
+import { useStore, switchTheme } from '../store';
 
 export default function App({ Component, pageProps }) {
   const store = useStore(pageProps.initialReduxState);
@@ -17,6 +17,9 @@ export default function App({ Component, pageProps }) {
     initGA();
     logPageView();
     Router.events.on('routeChangeComplete', logPageView);
+    if (localStorage.getItem('theme') === 'light') {
+      store.dispatch(switchTheme());
+    }
   }, []);
 
   store.subscribe(() => {
