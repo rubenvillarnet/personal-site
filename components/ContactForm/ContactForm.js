@@ -51,6 +51,7 @@ export default function ContactForm() {
             ¿Cual es tu correo electrónico?
             <input
               name='email'
+              type='text'
               ref={register({
                 required: true,
                 pattern: {

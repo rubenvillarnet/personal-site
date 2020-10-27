@@ -79,6 +79,15 @@ const GlobalStyle = createGlobalStyle`
     -webkit-text-fill-color: ${({ theme }) => theme.colors.primary} !important;
   }
 
+  input[type=text], textarea {   
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius:0; 
+    border-radius:0;
+
+  }
+
   .container{
     width: 75rem;
     max-width: 80%;
