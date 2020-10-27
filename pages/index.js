@@ -147,6 +147,28 @@ const Index = () => {
       <Head>
         <title>Rubén Villar Grela - Desarrollador Front End</title>
         <link rel='icon' href='/favicon.png' />
+
+        <meta property='og:type' content='article' />
+        <meta property='og:title' content='Rubén Villar' />
+        <meta
+          property='og:description'
+          content='Sitio web de Rubén Villar Grela, desarrollador web freelance'
+        />
+        <meta property='og:image' content='/img/foto-ironhack.png' />
+        <meta property='og:url' content='https://rubenvillar.net' />
+        <meta
+          property='og:site_name'
+          content='Rubén Villar Grela - Desarrollador Front End'
+        />
+
+        <meta name='twitter:title' content='Rubén Villar' />
+        <meta
+          name='twitter:description'
+          content='Sitio web de Rubén Villar Grela, desarrollador web freelance'
+        />
+        <meta name='twitter:image' content='/img/foto-ironhack.png' />
+        <meta name='twitter:site' content='@rubenvillarnet' />
+        <meta name='twitter:creator' content='@rubenvillarnet' />
       </Head>
       <ScrollLock isActive={!!displaySkill} />
       <IndexStyle isDarkTheme={isDarkTheme}>
