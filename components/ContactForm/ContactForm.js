@@ -16,17 +16,16 @@ export default function ContactForm() {
   const [showError, setShowError] = useState(false);
 
   const onSubmit = (data) => {
+    setShowModal(true);
     setIsLoading(true);
     axios
       .post(url, data)
       .then(() => {
         reset();
-        setShowModal(true);
       })
       .catch(() => {
         reset();
         setShowError(true);
-        setShowModal(true);
       })
       .finally(() => setIsLoading(false));
   };

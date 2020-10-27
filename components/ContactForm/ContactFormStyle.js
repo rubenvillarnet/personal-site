@@ -64,7 +64,7 @@ const StyledForm = styled.div`
     background-color: transparent;
     border: 1px solid ${({ theme }) => theme.colors.secondary};
     color: ${({ theme }) => theme.colors.secondary};
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     text-transform: uppercase;
     transition: all 0.5s;
     letter-spacing: 0.2rem;
