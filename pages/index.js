@@ -170,17 +170,20 @@ const Index = () => {
             <img src={me} alt='' className='my-photo' />
             <div className='top-area-text'>
               <h1>
-                Hola, me llamo Rubén Villar
-                <motion.span
-                  animate={{ width: '60%' }}
-                  initial={{ width: 0 }}
-                  transition={{
-                    duration: 2,
-                    delay: 1,
-                    type: 'tween'
-                  }}
-                  className='underline'
-                />
+                Hola, me llamo{' '}
+                <span className='name'>
+                  Rubén Villar
+                  <motion.span
+                    animate={{ width: '100%' }}
+                    initial={{ width: 0 }}
+                    transition={{
+                      duration: 2,
+                      delay: 1,
+                      type: 'tween'
+                    }}
+                    className='underline'
+                  />
+                </span>
               </h1>
               <p className='description'>
                 Soy un desarrollador full stack, especializado en el desarrollo

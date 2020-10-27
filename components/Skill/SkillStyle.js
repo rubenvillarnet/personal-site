@@ -105,7 +105,8 @@ const StyledSkill = styled.div`
       right: 0;
       z-index: 1;
       pointer-events: none;
-      padding: 4rem;
+      margin: 1.5rem;
+
       .top {
         .title {
           color: ${({ theme }) => theme.colors.backgroundSecondary};
@@ -116,7 +117,7 @@ const StyledSkill = styled.div`
         max-width: 60rem;
         margin: auto;
         height: auto;
-        padding: 4rem 2rem;
+        padding: 4rem 1rem 2rem 1rem;
         pointer-events: auto;
         flex-direction: column;
         cursor: auto;
@@ -133,7 +134,7 @@ const StyledSkill = styled.div`
         .skill-body {
           max-height: 2000px;
           max-width: 2000px;
-          margin-left: 3rem;
+          margin-left: 1.5rem;
           border-left: 0.25rem solid ${({ theme }) => theme.colors.primary};
           padding-left: 1.5rem;
         }
@@ -160,6 +161,12 @@ const StyledSkill = styled.div`
               font-size: 1.5rem;
             }
           }
+        }
+      }
+      &.open {
+        margin-top: 4rem;
+        .content {
+          margin: auto;
         }
       }
     }

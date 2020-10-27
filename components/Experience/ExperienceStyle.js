@@ -55,14 +55,13 @@ const StyledExperience = styled.div`
       padding: 0 1rem 2rem 1rem;
       transform-origin: top center;
       .title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        margin-bottom: 1rem;
         h3 {
           color: ${({ theme }) => theme.colors.secondary};
           font-size: 1.5rem;
           margin-bottom: 0.5rem;
           position: relative;
+          display: inline-block;
           &.freelance {
             &::after {
               position: absolute;
@@ -127,6 +126,9 @@ const StyledExperience = styled.div`
       .content {
         padding: 3rem;
         .title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
           margin-bottom: 2.5rem;
           h3 {

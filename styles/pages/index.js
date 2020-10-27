@@ -59,16 +59,18 @@ const IndexStyle = styled.div`
     h1 {
       margin-bottom: 3rem;
       font-size: 1rem;
-      position: relative;
       display: inline-block;
       font-family: 'Montserrat';
       font-weight: 300;
-      .underline {
-        content: '';
-        position: absolute;
-        right: -1rem;
-        bottom: -0.25rem;
-        border-bottom: 0.25rem solid ${({ theme }) => theme.colors.secondary};
+      .name {
+        position: relative;
+        .underline {
+          content: '';
+          position: absolute;
+          right: 0;
+          bottom: -0.25rem;
+          border-bottom: 0.25rem solid ${({ theme }) => theme.colors.secondary};
+        }
       }
     }
 
