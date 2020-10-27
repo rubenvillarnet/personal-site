@@ -1,8 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize';
+
 import MontserratRegular from '../public/static/fonts/Montserrat-Regular.ttf';
 import MontserratLight from '../public/static/fonts/Montserrat-Light.ttf';
 
 const GlobalStyle = createGlobalStyle`
+  ${normalize}
   @font-face {
     font-family: "Montserrat";
     src: url('${MontserratRegular}');
