@@ -175,6 +175,11 @@ const Index = () => {
         />
         <meta name='twitter:site' content='@rubenvillarnet' />
         <meta name='twitter:creator' content='@rubenvillarnet' />
+
+        <meta
+          name='google-site-verification'
+          content='P2cXUGzjFg-sKr53fsRrT7HoM9vPikxmmPHSFSdJANc'
+        />
       </Head>
       <ScrollLock isActive={!!displaySkill} />
       <IndexStyle isDarkTheme={isDarkTheme}>
