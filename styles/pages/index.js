@@ -261,11 +261,10 @@ const IndexStyle = styled.div`
       }
       .contact-content {
         display: flex;
-        .form-container {
-          max-width: 33rem;
-        }
+        width: 100%;
+        justify-content: center;
+        align-items: flex-start;
         .contact-methods {
-          margin-left: 8rem;
           p {
             font-size: 1.5rem;
             margin-bottom: 1rem;

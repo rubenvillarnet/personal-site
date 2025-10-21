@@ -283,15 +283,15 @@ const Index = () => {
         <div className='contact container' id='contact'>
           <h2>¿Hablamos?</h2>
           <div className='contact-content'>
-            <div className='form-container'>
+            {/* <div className='form-container'>
               <p>
                 Si quieres que trabajemos juntos, o si tienes alguna pregunta no
                 dudes en contactar conmigo, te responderé lo antes posible.
               </p>
               <ContactForm />
-            </div>
+            </div> */}
             <div className='contact-methods'>
-              <p>También puedes llamarme</p>
+              <p>Puedes llamarme</p>
               <p className='contact-link'>
                 <a href='tel:+34622014332'>+34 622 014 332</a>
               </p>
